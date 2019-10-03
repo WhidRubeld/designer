@@ -1,0 +1,19 @@
+<div id="{{name}}" class="modal {{#if fixedFooter}}modal-fixed-footer{{/if}}">
+  {{#if isForm}}
+  <form>
+  {{/if}}
+  <div class="content modal-content">
+    {{{content}}}
+  </div>
+  <div class="modal-footer">
+    {{#if canClose}}
+    <button type="button" class="modal-close btn-flat waves-effect waves-green">{{closeText}}</button>
+    {{/if}}
+    {{#if isForm}}
+    <button type="submit" class="btn-small waves-effect waves-light">{{submitText}}</button>
+    {{/if}}
+  </div>
+  {{#if isForm}}
+  </form>
+  {{/if}}
+</div>

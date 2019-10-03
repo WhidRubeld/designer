@@ -1,0 +1,23 @@
+<div class="row mb-0">
+  <div class="col l6">
+    <div class="row mb-0">
+      {{#each fields}}
+      <div class="col l12">
+        <label>
+          <input type="checkbox" name="fields[]" value="{{this.id}}" {{#if this.primary}}checked{{/if}} />
+          <span>{{this.name}}</span>
+        </label>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="col l6">
+    <div class="switch">
+    <label>
+      <input type="checkbox" name="increment" {{#if increment}}checked{{/if}}>
+      <span class="lever"></span>
+      AUTO_INCREMENT
+    </label>
+  </div>
+  </div>
+</div>

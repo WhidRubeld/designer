@@ -1,0 +1,14 @@
+<div class="title">
+  Первичный ключ
+  <a class="edit btn-floating right"><i class="material-icons">edit</i></a>
+</div>
+<div class="center">
+  {{#if fields}}
+  {{#each fields}}
+    <b>{{this}}</b>{{#unless @last}},{{/unless}}
+  {{/each}}
+  {{#if increment}} AUTO_INCREMENT {{/if}}
+  {{else}}
+    Нет первичного ключа
+  {{/if}}
+</div>

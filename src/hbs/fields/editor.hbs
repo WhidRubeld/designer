@@ -1,0 +1,55 @@
+<div class="row mb-0">
+  <div class="col l4">
+    <label>Название</label>
+    <div class="input-field m-0">
+      <input type="text" name="name" required />
+    </div>
+  </div>
+  <div class="col l4">
+    <label>Тип</label>
+    <select class="browser-default" name="type">
+      {{#each fieldTypes}}
+      <option value="{{this}}">{{this}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="col l4">
+    <label>Длина</label>
+    <div class="input-field m-0">
+      <input type="text" name="length">
+    </div>
+  </div>
+  <div class="col l4">
+    <label>Атрибут</label>
+    <select class="browser-default" name="attribute">
+      <option value="0">Нет</option>
+      {{#each attributes}}
+      <option value="{{this}}">{{this}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="col l4">
+    <label>Nullable</label>
+    <div class="input-field mb-0">
+      <div class="switch">
+        <label>
+          <input type="checkbox"  value="1" name="nullable">
+          NULL
+          <span class="lever"></span>
+          NOT NULL
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="col l4">
+    <label>По умолчанию</label>
+    <select class="browser-default" name="default">
+      <option value="0">Нет</option>
+      <option value="NULL">NULL</option>
+      <option value="own">Как определено</option>
+    </select>
+    <div class="defaultOwn input-field mt-0" style="display: none">
+      <input type="text"  name="defaultOwn">
+    </div>
+  </div>
+</div>

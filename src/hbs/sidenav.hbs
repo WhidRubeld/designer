@@ -1,0 +1,28 @@
+{{#if isForm}}
+<div id="{{name}}" class="sidenav">
+  <form>
+    {{#if title}}
+    <div class="flow-text center mt-1">
+      {{{title}}}
+    </div>
+    {{/if}}
+    <div class="content p-1">
+      {{{content}}}
+    </div>
+    <div class="sidenav-footer">
+      <button type="submit" class="btn waves-effect waves-light ml-1">{{submitText}}</button>
+    </div>
+  </form>
+<div>
+{{else}}
+<ul id="{{name}}" class="sidenav">
+  {{#if title}}
+  <li class="flow-text center mb-1">
+    {{title}}
+  </li>
+  {{/if}}
+  <div class="content">
+    {{{content}}}
+  </div>
+</ul>
+{{/if}}

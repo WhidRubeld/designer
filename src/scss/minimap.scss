@@ -1,0 +1,36 @@
+/* MINIMAP */
+#minimap #selectWin {
+    z-index: 9999;
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, .075);
+  }
+  
+  #minimap #selectWin .selectionWin {
+    position: absolute;
+    background: #00000052;
+    ;
+    opacity: 0.5;
+  }
+  
+  #minimap,
+  #minimap #selectWin,
+  #minimap #miniview {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    overflow: hidden;
+  }
+  
+  #schemaMini {
+    width: 5000px;
+    height: 5000px;
+    background: #7979791a
+  }
+  
+  #minimap .table {
+    background: #ffffff !important;
+    color: #ffffff !important;
+  }
+  
+  #minimap .jtk-connector path {
+    stroke-width: 10px;
+  }

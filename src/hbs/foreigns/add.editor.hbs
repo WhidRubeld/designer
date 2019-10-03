@@ -1,0 +1,35 @@
+<div class="row mb-0">
+  <div class="col l6">
+    <label>Поле(приемник)</label>
+    <select class="browser-default" name="field" required>
+      <option value="0" selected disabled>Не выбрано</option>
+      {{#each fields}}
+      <option value="{{this.id}}">{{this.name}}</option>
+      {{/each}}
+    </select>
+    <label>ON UPDATE</label>
+    <select class="browser-default" name="onUpdate" required>
+      <option value="RESTRICT">RESTRICT</option>
+      <option value="CASCADE">CASCADE</option>
+      <option value="SET NULL">SET NULL</option>
+    </select>
+    <label>ON DELETE</label>
+    <select class="browser-default" name="onDelete">
+      <option value="RESTRICT">RESTRICT</option>
+      <option value="CASCADE">CASCADE</option>
+      <option value="SET NULL">SET NULL</option>
+    </select>
+  </div>
+  <div class="col l6">
+    <label>Таблица(источник)</label>
+    <select class="browser-default" name="table" required disabled>
+      <option value="0" selected disabled>Не выбрана</option>
+      {{#each tables}}
+      <option value="{{this.id}}">{{this.name}}</option>
+      {{/each}}
+    </select>
+    <label>Поле источника</label>
+    <select class="browser-default" name="onField" disabled>
+    </select>
+  </div>
+</div>

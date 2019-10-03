@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/bundle.css">
+
+  <title>Онлайн инструмент проектирования базы данных MySQL</title>
+</head>
+
+<body>
+  <div id="loader">
+    <div class="spinner">
+      <svg width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://-www.w3.org/2000/svg">
+        <circle fill="none" stroke-width="4" stroke-linecap="round" cx="33" cy="33" r="30" class="circle"></circle>
+      </svg>
+    </div>
+  </div>
+  <div id="menu">
+    <div class="d-flex">
+      <button class="open btn-flat waves-effect waves-light">
+        <i class="material-icons">menu</i>
+      </button>
+      <div class="brand">
+        <span><b>DB</b> Designer</span>
+        <span class="new badge" data-badge-caption="MySQL"></span>
+      </div>
+    </div>
+
+    <div class="switch mr-2">
+      <label>
+        <input id="minimap-status" type="checkbox" checked>
+        <span class="lever"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="cont">
+    <div id="schema">
+    </div>
+    <label id="zoom">100%</label>
+  </div>
+
+  <script src="js/bundle.js"></script>
+</body>
+
+</html>

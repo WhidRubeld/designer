@@ -1,0 +1,103 @@
+/* TABLES */
+#zoom {
+    color: #646464;
+    position: fixed;
+    right: 10px;
+    bottom: 5px;
+}
+
+.cont {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    padding-top: 50px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: #ececec;
+}
+
+#content {
+    height: 100%;
+    background-size: 50px 50px;
+}
+
+#schema {
+    width: 5000px;
+    height: 5000px;
+    position: relative;
+    background-color: transparent;
+    background-image: linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent);
+    background-size: 50px 50px;
+}
+
+.table {
+    position: absolute;
+    min-width: 175px;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    background: #fff;
+    cursor: grab;
+
+    .name {
+        text-align: center;
+        padding: 10px 22px;
+        border-bottom: 2px solid rgb(131, 199, 193);
+    }
+
+    .fields {
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: inherit;
+            border-top: 1px solid #e6e6e6;
+            padding: 5px 10px;
+            color: #4e4d4d;
+            font-size: .875rem;
+
+            &:first-of-type {
+                border-top: 0;
+            }
+
+            &.primary i::before {
+                font-family: 'Material Icons';
+                content: 'vpn_key';
+                font-style: normal;
+                padding-right: 5px;
+                color: #fcb442;
+            }        
+
+            i {
+                display: flex;
+                margin-left: 20px;
+                font-size: .75rem;
+                color: #717171;
+            }
+        }
+    }
+
+    .options {
+        position: absolute;
+        opacity: 0;
+        font-size: 1rem;
+        right: 5px;
+        top: 5px;
+        color: #343434;
+        transition: opacity ease .5s;
+    }
+
+    &:hover {
+        .options {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+}

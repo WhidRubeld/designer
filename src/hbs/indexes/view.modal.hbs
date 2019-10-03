@@ -1,0 +1,26 @@
+<div class="title">
+  Индексы
+  <a class="add btn-floating right"><i class="material-icons">add</i></a>
+</div>
+{{#if indexes}}
+ <ul class="collection">
+  {{#each indexes}}
+  <li class="collection-item">
+    <div class="desc">
+      {{this.type}}
+      <i class="grey-text">
+        ({{this.fields}}) 
+      </i>
+    </div>
+    <div class="actions">
+      <i class="edit tiny material-icons" data-id="{{this.id}}" title="Просмотр/Редактирование">edit</i>
+      <i class="delete tiny material-icons red-text text-darken-1 ml-2" data-id="{{this.id}}" title="Удалить">delete</i>
+    </div>
+  </li>
+  {{/each}}
+</ul>
+{{else}}
+<div class="center grey-text">
+  Индексов не найдено
+</div>
+{{/if}}

@@ -1,0 +1,30 @@
+<div class="title">
+  Поля таблицы
+  <a class="add btn-floating right"><i class="material-icons">add</i></a>
+</div>
+{{#if fields}}
+<ul class="collection">
+  {{#each fields}}
+  <li class="collection-item">
+    <div class="desc">
+      {{this.name}}
+      <i class="grey-text">
+        {{this.type}}{{#if this.length}}({{this.length}}){{/if}}
+        {{#if this.attribute}}{{this.attribute}}{{/if}}
+        {{#unless this.nullable}}NOT NULL{{/unless}}
+        {{#compare this.default 'NULL'}}DEFAULT NULL{{/compare}}
+        {{#compare this.default 'own'}}DEFAULT '{{this.defaultVal}}'{{/compare}}
+      </i>
+    </div>
+    <div class="actions">
+      <i class="edit tiny material-icons" data-id="{{this.id}}" title="Просмотр/Редактирование">edit</i>
+      <i class="delete tiny material-icons red-text text-darken-1 ml-2" data-id="{{this.id}}" title="Удалить">delete</i>
+    </div>
+  </li>
+  {{/each}}
+</ul>
+{{else}}
+<div class="center grey-text">
+  Полей не найдено
+</div>
+{{/if}}

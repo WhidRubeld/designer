@@ -1,0 +1,23 @@
+<div class="row mb-0">
+  <div class="col l6">
+    <label>Тип индекса</label>
+    <select class="browser-default" name="index" required>
+      {{#each indexes}}
+      <option value="{{this}}">{{this}}</option>
+      {{/each}}
+    </select>
+  </div>
+  <div class="col l6">
+    <div class="row mb-0">
+      {{#each fields}}
+      <div class="col l12">
+        <label>
+          <input type="checkbox" name="fields[]" value="{{this.id}}" disabled />
+          <span>{{this.name}}</span>
+        </label>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
